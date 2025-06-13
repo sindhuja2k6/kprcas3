@@ -4,19 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .inline{
+            display: inline;
+        } 
+         .flex-container{
+            display: flex;
+            /*flex-direction:  row reverse; */
+            justify-content: space-around;
+            align-items: center;
+            background-color: aqua;
+            height: 100vh;
+        }
+        .flex-container div{
+            background-color: peachpuff;
+            border: 2px solid brown;
+            height: 100px;
+            width: 100px;
+        }
+        /* .item2{
+            /* flex-grow: 2; */
+            /* flex-shrink: 0;
+        } */ */
+
+        .grid-container{
+            display: grid;
+            grid-template-rows: 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            gap: 20px;
+        }
+        .grid-container div{
+            background-color: plum;
+            border: 2px solid purple;
+        }
+        /* .item1{
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        .item2{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        } */
+  .grid-container2{
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px  100px 100px;
+            gap: 0px;
+        }
+        .grid-container2 div{
+            background-color: plum;
+            border: 2px solid purple;
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .item2{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .item3{
+            grid-column-start: 4;
+        }
+        .item4{
+            grid-column-start: 1;
+            grid-column-end: 5; 
+        }
+        @media (max-width:720px){
+            .navbar{
+                display: flex;
+                flex-direction: column;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+    </style>
 </head>
 <body>
     <div>
         <h1 class="inline"> same</h1>
         <h1 class="inline"> line</h1>
     </div>
-    
-    <div class="flex-container">
+    <!-- <div class="flex-container">
         <div class ="item1">1</div>
         <div class ="item2">2</div>
         <div class ="item3">3</div>
         <div class ="item4">4</div>
+    </div> -->
+    <!-- <div class="grid-container">
+        <div class ="item1">1</div>
+        <div class ="item2">2</div>
+        <div class ="item3">3</div>
+        <div class ="item4">4</div>
+        <div class ="item5">5</div>
+        <div class ="item6">6</div>
+        <div class ="item7">7</div>
+    </div> -->
+    <div class="grid-container2">
+        <div class ="item1">header</div>
+        <div class ="item2">main</div>
+     
+        <div class ="item3">sidebar</div>
+        <div class ="item4">footer</div>
     </div>
 </body>
 </html>
